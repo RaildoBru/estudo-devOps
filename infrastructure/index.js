@@ -26,9 +26,10 @@ class CheckInfrastructure {
 
   checkPostgres = async() => {
     const pgConnection = new Pool({
-      user: 'postgres',
-      password: '1234',
+      user: process.env.POSTGRES_USER,
+      password: process.env.POSTGRES_PASSWORD,
     });
+    console.log(process.env.POSTGRES_PASSWORD);
     
     try {
       await pgConnection.query('SELECT NOW()');
