@@ -1,10 +1,12 @@
 const { createClient } = require('redis');
-const redisClient = createClient();
 const { Pool } = require('pg')
 
 class CheckInfrastructure {
 
   checkRedis = async () => {
+      const redisClient = createClient({
+        url: process.env.URL_REDIS
+      })
 
       try {
         await redisClient.connect();
@@ -26,10 +28,12 @@ class CheckInfrastructure {
 
   checkPostgres = async() => {
     const pgConnection = new Pool({
+      host: process.env.POSTGRES_HOST,
       user: process.env.POSTGRES_USER,
       password: process.env.POSTGRES_PASSWORD,
+      port: process.env.POSTGRES_PORT
+
     });
-    console.log(process.env.POSTGRES_PASSWORD);
     
     try {
       await pgConnection.query('SELECT NOW()');
