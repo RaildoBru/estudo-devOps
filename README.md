@@ -47,7 +47,7 @@ Instalação
     POSTGRES_PASSWORD='senha'
 
 
-4.  Inicialize o servidor:
+5.  Inicialize o servidor:
 
     npm start
 
