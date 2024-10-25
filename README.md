@@ -25,6 +25,8 @@ Instalação
     POSTGRES_PASSWORD='senha'
 
 
-5.  Inicialize o servidor:
+4.  Inicialize o servidor:
+
+    npm start
 
     O servidor estará disponível em http://localhost:3000.
