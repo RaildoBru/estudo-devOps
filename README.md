@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center"> ESTUDO DEVOPS </h1>
 
 
@@ -74,3 +75,6 @@ Instalar Banco de dados se necessario
 
         sudo systemctl restart redis.service
         sudo systemctl status redis
+=======
+ESTUDO DEVOps
+>>>>>>> 217ee5c (Adicionando arquivo .env)
